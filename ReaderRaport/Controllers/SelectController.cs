@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using static ReaderRaport.Handlers.Scraper;
+using static ReaderRaport.Handlers.LubimyCzytacScraper;
 
 namespace ReaderRaport.Controllers
 {
@@ -13,11 +13,14 @@ namespace ReaderRaport.Controllers
         // GET: Select
         public ActionResult Index()
         {
-            string url = BookNameSearchUrl("Przebudzenie Króla Lisza");
-            List<string> imagesUrls = GetHrefs(url);
-            ViewBag.coversUrls = imagesUrls;
+            LubimyCzytacScraper scraper = new LubimyCzytacScraper();
 
-            return View();
+            string bookName = "Przebudzenie Króla Lisza";
+            string imageUrl = scraper.GetCover(bookName, out string msg);
+            ViewBag.coverUrl = imageUrl;
+
+            return Content(msg);
+            //return View();
         }
     }
 }
