@@ -31,6 +31,7 @@ namespace ReaderRaport.Handlers {
                     foreach (HtmlNode subNode in node.SelectNodes("img")) {
                         HtmlAttribute hrefAttr = subNode.Attributes["src"];
                         href=hrefAttr.Value;
+                        return href;
                     }
                 }
             } catch (WebException e) {
@@ -38,6 +39,7 @@ namespace ReaderRaport.Handlers {
             } catch {
                 msg = "Book doesn't exist in web service.";
             }
+
             return href;
         }
 

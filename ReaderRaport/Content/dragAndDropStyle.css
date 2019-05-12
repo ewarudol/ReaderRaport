@@ -1,0 +1,20 @@
+﻿#dropSection {
+    height: 200px;
+    width: 100%;
+    background-color: #138086;
+    color: white;
+    border: 3px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnUpload {
+    display: none;
+}
+
+.active {
+    background-color: yellow !important;
+}
+
+

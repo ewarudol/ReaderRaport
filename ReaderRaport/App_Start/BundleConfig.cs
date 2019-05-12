@@ -8,6 +8,12 @@ namespace ReaderRaport {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/dragAndDrop").Include(
+                       "~/Scripts/jquery-1.8.3.min.js",
+                       "~/Scripts/jquery.filedrop.js",
+                       "~/Scripts/dragAndDrop.js"
+                       ));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -21,7 +27,9 @@ namespace ReaderRaport {
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/dragAndDropStyle.css"
+                      ));
         }
     }
 }
