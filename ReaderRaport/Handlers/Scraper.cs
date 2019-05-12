@@ -50,5 +50,6 @@ namespace ReaderRaport.Handlers {
             string url = "http://lubimyczytac.pl/szukaj/ksiazki?phrase=";
             return url + bookName.Replace(' ', '+');
         }
+
     }
 }
