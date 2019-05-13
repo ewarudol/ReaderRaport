@@ -9,13 +9,13 @@
         maxfiles: 1, //Maximum Number of Files allowed at a time.
         maxfilesize: 2, //Maximum File Size in MB.
         dragOver: function () {
-            $('#dropSection').addClass('active');
+            $('#dropSection').addClass('activeDrop');
         },
         dragLeave: function () {
-            $('#dropSection').removeClass('active');
+            $('#dropSection').removeClass('activeDrop');
         },
         drop: function () {
-            $('#dropSection').removeClass('active');
+            $('#dropSection').removeClass('activeDrop');
         },
         uploadFinished: function (i, file, response, time) {
             $('#uploadedFile').css({ "visibility": "visible" });

@@ -28,7 +28,8 @@ namespace ReaderRaport {
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/dragAndDropStyle.css"
+                      "~/Content/dragAndDropStyle.css",
+                      "~/Content/styles.css"
                       ));
         }
     }

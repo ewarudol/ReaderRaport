@@ -13,7 +13,7 @@
     display: none;
 }
 
-.active {
+.activeDrop {
     background-color: yellow !important;
 }
 
