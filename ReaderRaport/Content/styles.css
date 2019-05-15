@@ -2,3 +2,16 @@
     margin: 0;
     padding: 0;
 }
+
+.homeImg{
+    width: 100%;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.vertical-mid {
+    display: flex;
+    align-items: center;
+}

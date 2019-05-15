@@ -117,11 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="idxHowDesc" xml:space="preserve">
+    <value>To na prawdę proste!</value>
+  </data>
+  <data name="idxHowList1" xml:space="preserve">
+    <value>Na początku stworzysz swoją pustą, wirtualną biblioteczkę.</value>
+  </data>
+  <data name="idxHowList2" xml:space="preserve">
+    <value>Będziesz mógł ją pobrać i edytować nawet z tropikalnej wyspy bez dostępu internetu!</value>
+  </data>
+  <data name="idxHowList3" xml:space="preserve">
+    <value>Gdy tylko będziesz chciał wyświetlić swoje statystyki, wrócisz tu ze swoimy cennymi danymi.</value>
+  </data>
+  <data name="idxHowTitle" xml:space="preserve">
+    <value>Jak to działa</value>
+  </data>
+  <data name="idxLibraryDesc" xml:space="preserve">
+    <value>Nie martw się, każdy poradzi sobie z obsługą biblioteczki :)&lt;/br&gt; Zapiszemy ją do pliku .csv, który otworzysz w dowolnym arkuszu kalkulacyjnym jak Excel, LibreOffice czy OpenOffice. To tylko tabelka!</value>
+  </data>
+  <data name="idxLibraryTitle" xml:space="preserve">
+    <value>Biblioteczka</value>
+  </data>
+  <data name="idxMotivationDesc" xml:space="preserve">
+    <value>Czasami przychodzi moment, że zastanawiasz się co najczęściej czytasz, w jakich miesiącach, czy wakacje dobrze wpływają na twoj nawyki czytelnicze, a gdzie wpływ miały postanowienia noworoczne. Oto wlaśnie moment, by to sprawdzić!</value>
+  </data>
+  <data name="idxMotivationTitle" xml:space="preserve">
+    <value>Motywacja</value>
+  </data>
+  <data name="idxSummaryButton" xml:space="preserve">
+    <value>Zaczynamy</value>
+  </data>
+  <data name="idxSummaryList1" xml:space="preserve">
+    <value>Stwórz swoją bibioteczkę</value>
+  </data>
+  <data name="idxSummaryList2" xml:space="preserve">
+    <value>Uzupełnij ją w aplikacji lub pobierz i dodaj dane bezpośrednio na twoim komputerze</value>
+  </data>
+  <data name="idxSummaryList3" xml:space="preserve">
+    <value>Wybierz &lt;span class="badge badge-pill badge-primary"&gt;Generuj raport &lt;/span&gt; w głównym menu!</value>
+  </data>
+  <data name="idxSummaryTitle" xml:space="preserve">
+    <value>Co teraz?</value>
+  </data>
+  <data name="idxWelcomeDesc" xml:space="preserve">
+    <value>Witaj! W tej prostej aplikacji poznasz niektóre ze statytyk opisujących twoje nawyki czytelnicze. Naprzód!</value>
+  </data>
+  <data name="idxWelcomeTitle" xml:space="preserve">
+    <value>Reader Raport</value>
+  </data>
   <data name="navGenerateRaport" xml:space="preserve">
     <value>Generuj raport</value>
   </data>
   <data name="navLanguage" xml:space="preserve">
-    <value>Zmień język</value>
+    <value>Switch language</value>
   </data>
   <data name="navYourDigitalLibrary" xml:space="preserve">
     <value>Twoja elektroniczna biblioteczka</value>

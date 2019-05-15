@@ -61,6 +61,150 @@ namespace ReaderRaport.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to To na prawdę proste!.
+        /// </summary>
+        public static string idxHowDesc {
+            get {
+                return ResourceManager.GetString("idxHowDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Na początku stworzysz swoją pustą, wirtualną biblioteczkę..
+        /// </summary>
+        public static string idxHowList1 {
+            get {
+                return ResourceManager.GetString("idxHowList1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Będziesz mógł ją pobrać i edytować nawet z tropikalnej wyspy bez dostępu internetu!.
+        /// </summary>
+        public static string idxHowList2 {
+            get {
+                return ResourceManager.GetString("idxHowList2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gdy tylko będziesz chciał wyświetlić swoje statystyki, wrócisz tu ze swoimy cennymi danymi..
+        /// </summary>
+        public static string idxHowList3 {
+            get {
+                return ResourceManager.GetString("idxHowList3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jak to działa.
+        /// </summary>
+        public static string idxHowTitle {
+            get {
+                return ResourceManager.GetString("idxHowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nie martw się, każdy poradzi sobie z obsługą biblioteczki :)        ///&lt;/br&gt; Zapiszemy ją do pliku .csv, który otworzysz w dowolnym arkuszu kalkulacyjnym jak Excel, LibreOffice czy OpenOffice. To tylko tabelka!.
+        /// </summary>
+        public static string idxLibraryDesc {
+            get {
+                return ResourceManager.GetString("idxLibraryDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Biblioteczka.
+        /// </summary>
+        public static string idxLibraryTitle {
+            get {
+                return ResourceManager.GetString("idxLibraryTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Czasami przychodzi moment, że zastanawiasz się co najczęściej czytasz, w jakich miesiącach, czy wakacje dobrze wpływają na twoj nawyki czytelnicze, a gdzie wpływ miały postanowienia noworoczne.         ///Oto wlaśnie moment, by to sprawdzić!.
+        /// </summary>
+        public static string idxMotivationDesc {
+            get {
+                return ResourceManager.GetString("idxMotivationDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motywacja.
+        /// </summary>
+        public static string idxMotivationTitle {
+            get {
+                return ResourceManager.GetString("idxMotivationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zaczynamy.
+        /// </summary>
+        public static string idxSummaryButton {
+            get {
+                return ResourceManager.GetString("idxSummaryButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stwórz swoją bibioteczkę.
+        /// </summary>
+        public static string idxSummaryList1 {
+            get {
+                return ResourceManager.GetString("idxSummaryList1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uzupełnij ją w aplikacji lub pobierz i dodaj dane bezpośrednio na twoim komputerze.
+        /// </summary>
+        public static string idxSummaryList2 {
+            get {
+                return ResourceManager.GetString("idxSummaryList2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wybierz &lt;span class=&quot;badge badge-pill badge-primary&quot;&gt;Generuj raport &lt;/span&gt; w głównym menu!.
+        /// </summary>
+        public static string idxSummaryList3 {
+            get {
+                return ResourceManager.GetString("idxSummaryList3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Co teraz?.
+        /// </summary>
+        public static string idxSummaryTitle {
+            get {
+                return ResourceManager.GetString("idxSummaryTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Witaj! W tej prostej aplikacji poznasz niektóre ze statytyk opisujących twoje nawyki czytelnicze. Naprzód!.
+        /// </summary>
+        public static string idxWelcomeDesc {
+            get {
+                return ResourceManager.GetString("idxWelcomeDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reader Raport.
+        /// </summary>
+        public static string idxWelcomeTitle {
+            get {
+                return ResourceManager.GetString("idxWelcomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generuj raport.
         /// </summary>
         public static string navGenerateRaport {
@@ -70,7 +214,7 @@ namespace ReaderRaport.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zmień język.
+        ///   Looks up a localized string similar to Switch language.
         /// </summary>
         public static string navLanguage {
             get {

@@ -1,7 +1,62 @@
 ﻿<div class="jumbotron">
-    <h1 class="display-3">@ViewBag.Title</h1>
+    <h1 class="display-3">@ReaderRaport.Resources.PageText.idxWelcomeTitle</h1>
     <p class="lead">
-        Welcome! This simple app tells you some base statistic about your reading customs. Lets prepare your data!
+        @ReaderRaport.Resources.PageText.idxWelcomeDesc
     </p>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 vertical-mid text-justify ">
+            <div>
+                <h2 class="font-weight-light mb-4">@ReaderRaport.Resources.PageText.idxMotivationTitle</h2>
+                <p> @ReaderRaport.Resources.PageText.idxMotivationDesc </p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img class="homeImg" src="~/Content/home1.png" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 order-lg-1 order-sm-2">
+            <img class="homeImg" src="~/Content/home2.png" />
+        </div>
+        <div class="col-lg-6 col-sm-12 order-lg-2 order-sm-1 vertical-mid text-justify">
+            <div>
+                <h2 class="font-weight-light mb-4">@ReaderRaport.Resources.PageText.idxHowTitle</h2>
+                <p> @ReaderRaport.Resources.PageText.idxHowDesc </p>
+                <ol>
+                    <li> @ReaderRaport.Resources.PageText.idxHowList1 </li>
+                    <li> @ReaderRaport.Resources.PageText.idxHowList2 </li>
+                    <li> @ReaderRaport.Resources.PageText.idxHowList3 </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 vertical-mid text-justify ">
+            <div>
+                <h2 class="font-weight-light mb-4">@ReaderRaport.Resources.PageText.idxLibraryTitle</h2>
+                <p> @Html.Raw(@ReaderRaport.Resources.PageText.idxLibraryDesc) </p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img class="homeImg" src="~/Content/home3.png" />
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-sm-12 justify-content-center">
+            <h2 class="text-center font-weight-light">@ReaderRaport.Resources.PageText.idxSummaryTitle</h2>
+            <img class="homeImg" src="~/Content/home4.png" />
+            <ul>
+                <li class="mb-3"> @ReaderRaport.Resources.PageText.idxSummaryList1 </li>
+                <li class="mb-3"> @ReaderRaport.Resources.PageText.idxSummaryList2 </li>
+                <li class="mb-3"> @Html.Raw(@ReaderRaport.Resources.PageText.idxSummaryList3) </li>
+            </ul>
+        </div>
+    </div>
+
 
