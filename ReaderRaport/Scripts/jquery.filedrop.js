@@ -55,7 +55,7 @@
       afterAll: empty,
       rename: empty,
       error: function(err, file, i, status) {
-        alert(err);
+        //alert(err);
       },
       uploadStarted: empty,
       uploadFinished: empty,

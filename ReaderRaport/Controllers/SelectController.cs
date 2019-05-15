@@ -25,20 +25,21 @@ namespace ReaderRaport.Controllers
         }
 
         [HttpPost]
-        public ActionResult Upload(List<HttpPostedFileBase> fileData) {
+        public ActionResult Upload(HttpPostedFileBase fileData) {
+            string statusMsg = "Oh no, something went wrong. Check if your file doesn't consist strange characters or extention.";
             try {
                 string path = Server.MapPath("~/Uploaded/");
-                foreach (HttpPostedFileBase postedFile in fileData) {
-                    if (postedFile != null) {
-                        string fileName = Path.GetFileName(postedFile.FileName);
-                        postedFile.SaveAs(path + fileName);
-                    }
+                if (fileData != null) {
+                    string fileName = Path.GetFileName(fileData.FileName);
+                    fileData.SaveAs(path + fileName);
+                    statusMsg = "Success!";
+                    return Json(statusMsg);
                 }
-                return Json("Success!");
             } catch {
-                return Json("Oh no, something went wrong. Check if your file doesn't consist strange characters or extention.");
-            }
-        }
+                return Json(statusMsg);
+            } 
+            return Json(statusMsg);
+    }
     }
 
 }
