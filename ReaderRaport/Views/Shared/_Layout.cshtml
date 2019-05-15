@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using ReaderRaport.Handlers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,13 +17,30 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    @Html.ActionLink("Reader Raport", "Index", "Select", new { @class = "navbar-brand nav-link" })
+                    @Html.ActionLink("Reader Raport", "Index", new { controller = "Select" }, new { @class = "navbar-brand nav-link" })
                 </li>
                 <li class="nav-item active">
-                   @Html.ActionLink("How to use", "Usage", "Select", new {@class= "nav-link" })
+                    @Html.ActionLink(@ReaderRaport.Resources.PageText.navYourDigitalLibrary, "YourDigitalLibrary", new { controller = "Select" }, new { @class = "nav-link" })
                 </li>
                 <li class="nav-item active">
-                   @Html.ActionLink("Contact", "Contact", "Select", new { @class = "nav-link" })
+                    @Html.ActionLink(@ReaderRaport.Resources.PageText.navGenerateRaport, "Generate", new { controller = "Select" }, new { @class = "nav-link" })
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle"
+                                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            @ReaderRaport.Resources.PageText.navLanguage
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            @Html.ActionLink("Polski", "Change", "Select", new { ln = "pl", source = @Html.CurrentViewName() }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("English", "Change", "Select", new { ln = "en", source = @Html.CurrentViewName() }, new { @class = "dropdown-item" })
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -29,11 +48,7 @@
 
     <div class="container body-content">
 
-
-
         @RenderBody()
-
-
 
         <hr />
         <footer>

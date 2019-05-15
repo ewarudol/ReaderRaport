@@ -23,6 +23,7 @@
         },
         error: function (err, file, i, status) {
             $('#uploadedFile').css({ "visibility": "visible" });
+            //$('#uploadedFile').html(err);
             $('#uploadedFile').html("Oh no, something went wrong. Check if your file doesn't consist strange characters or extention.");
         },
         afterAll: function (e) {
