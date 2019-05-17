@@ -27,7 +27,15 @@
             $('#uploadedFile').html("Oh no!");
         },
         afterAll: function (e) {
-            //To do some task after all uploads done.
+            $.ajax({
+                url: "http://localhost:58672/Select/YourDigitalLibrary",
+                type: 'GET', // <-- make a async request by GET
+                dataType: 'html', // <-- to expect an html response
+                success: function (result) {
+                    alert("auu");
+                    $('#booksList').html(result);
+                }
+            });
         }
 
     })

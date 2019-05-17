@@ -1,4 +1,6 @@
-﻿@using ReaderRaport.Models
+﻿<div id="booksList">
+    @Html.Partial("_BooksList")
+</div>
 
 <h3 class="display-4">Upload .csv containing your electronic book shelf </h3>
 
@@ -18,12 +20,4 @@
 }
 
 <p>Jesli wszystko działa to...</p>
-<h1>
-    @{
-        if (!((Library)Session["library"] == null)) {
-            Library lib = (Library)Session["library"];
-            @lib.LibraryName
-        }
-    }
-</h1>
 

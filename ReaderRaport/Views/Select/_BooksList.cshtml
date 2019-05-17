@@ -1,0 +1,11 @@
+﻿@using ReaderRaport.Models
+
+@{
+    if (!((Library)Session["library"] == null)) {
+        Library lib = (Library)Session["library"];
+        @lib.LibraryName
+    } else {
+        string msg = "Not";
+        @msg
+    }
+}

@@ -267,6 +267,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Select\YourDigitalLibrary.cshtml" />
+    <Content Include="Views\Select\_BooksList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

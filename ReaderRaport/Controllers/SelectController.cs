@@ -21,6 +21,9 @@ namespace ReaderRaport.Controllers
 
         public ActionResult YourDigitalLibrary() {
 
+            if(Request.IsAjaxRequest()){
+                return PartialView("_BooksList");
+            }
 
             return View();
         }
