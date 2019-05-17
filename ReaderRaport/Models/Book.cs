@@ -1,19 +1,29 @@
-﻿using System;
+﻿using ReaderRaport.Handlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace ReaderRaport.Models {
+    public class Book : RawBook {
 
-    public class Book {
+        //metadata about book
+        public string CoverURL { get; set; }
 
-        public int Id { get; set; }
-        public string BookName { get; set; }
-        public string Series { get; set; }
-        public string AuthorSurname { get; set; }
-        public string AuthorName { get; set; }
-        public string Genre { get; set; }
-        public DateTime ReadDate { get; set; }
+        public Book(RawBook raw) {
+            BookName = raw.BookName;
+            Series = raw.Series;
+            AuthorSurname = raw.AuthorName;
+            AuthorName = raw.AuthorSurname;
+            Genre = raw.Genre;
+            ReadDate = raw.ReadDate;
 
+            LubimyCzytacScraper scraper = new LubimyCzytacScraper();
+            try {
+                CoverURL = scraper.GetCover(BookName);
+            } catch {
+                CoverURL = "http://lgimages.s3.amazonaws.com/gc-md.gif";
+            }
+        }
     }
 }

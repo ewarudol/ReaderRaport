@@ -205,6 +205,33 @@ namespace ReaderRaport.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Och nie, coś poszło źle. Na pewno twój plik ma dobry format?.
+        /// </summary>
+        public static string msgCSV {
+            get {
+                return ResourceManager.GetString("msgCSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ups! Upewnij się, że twoja biblioteczka wygląda tak, jak się spodzewamy. Zajrzyj do sekcji pomocy w menu na górze..
+        /// </summary>
+        public static string msgCSVFormat {
+            get {
+                return ResourceManager.GetString("msgCSVFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Super, plik wgrany! Wszystko idzie zgodnie z planem..
+        /// </summary>
+        public static string msgCSVSuccses {
+            get {
+                return ResourceManager.GetString("msgCSVSuccses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generuj raport.
         /// </summary>
         public static string navGenerateRaport {

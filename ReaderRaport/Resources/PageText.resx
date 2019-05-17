@@ -165,6 +165,15 @@
   <data name="idxWelcomeTitle" xml:space="preserve">
     <value>Reader Raport</value>
   </data>
+  <data name="msgCSV" xml:space="preserve">
+    <value>Och nie, coś poszło źle. Na pewno twój plik ma dobry format?</value>
+  </data>
+  <data name="msgCSVFormat" xml:space="preserve">
+    <value>Ups! Upewnij się, że twoja biblioteczka wygląda tak, jak się spodzewamy. Zajrzyj do sekcji pomocy w menu na górze.</value>
+  </data>
+  <data name="msgCSVSuccses" xml:space="preserve">
+    <value>Super, plik wgrany! Wszystko idzie zgodnie z planem.</value>
+  </data>
   <data name="navGenerateRaport" xml:space="preserve">
     <value>Generuj raport</value>
   </data>

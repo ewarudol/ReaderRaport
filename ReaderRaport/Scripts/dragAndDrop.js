@@ -19,12 +19,12 @@
         },
         uploadFinished: function (i, file, response, time) {
             $('#uploadedFile').css({ "visibility": "visible" });
-            $('#uploadedFile').html(response + "Your file: " + file.name + '<br />');
+            $('#uploadedFile').html(response);
         },
         error: function (err, file, i, status) {
             $('#uploadedFile').css({ "visibility": "visible" });
             //$('#uploadedFile').html(err);
-            $('#uploadedFile').html("Oh no, something went wrong. Check if your file doesn't consist strange characters or extention.");
+            $('#uploadedFile').html("Oh no!");
         },
         afterAll: function (e) {
             //To do some task after all uploads done.

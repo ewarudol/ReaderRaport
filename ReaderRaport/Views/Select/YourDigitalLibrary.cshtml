@@ -1,4 +1,4 @@
-﻿<h2>@ViewBag.Title</h2>
+﻿@using ReaderRaport.Models
 
 <h3 class="display-4">Upload .csv containing your electronic book shelf </h3>
 
@@ -16,4 +16,14 @@
 @{
     <img src="@ViewBag.coverUrl" />
 }
+
+<p>Jesli wszystko działa to...</p>
+<h1>
+    @{
+        if (!((Library)Session["library"] == null)) {
+            Library lib = (Library)Session["library"];
+            @lib.LibraryName
+        }
+    }
+</h1>
 

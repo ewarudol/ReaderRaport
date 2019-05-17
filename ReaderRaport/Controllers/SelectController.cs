@@ -1,13 +1,11 @@
-﻿using ReaderRaport.Handlers;
-using System;
+﻿using CsvHelper;
+using ReaderRaport.Handlers;
+using ReaderRaport.Models;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
-using static ReaderRaport.Handlers.LubimyCzytacScraper;
 
 namespace ReaderRaport.Controllers
 {
@@ -23,15 +21,11 @@ namespace ReaderRaport.Controllers
 
         public ActionResult YourDigitalLibrary() {
 
-            LubimyCzytacScraper scraper = new LubimyCzytacScraper();
-            string bookName = "harry potter";
-            string imageUrl = scraper.GetCover(bookName, out string msg);
-            ViewBag.coverUrl = imageUrl;
 
-            ViewBag.Title = "Libka";
             return View();
         }
 
+        /* save posted file code
         [HttpPost]
         public ActionResult Upload(HttpPostedFileBase fileData) {
             string statusMsg = "Oh no, something went wrong. Check if your file doesn't consist strange characters or extention.";
@@ -48,7 +42,30 @@ namespace ReaderRaport.Controllers
             } 
             return Json(statusMsg);
         }
+        */
 
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase fileData) {
+            try {
+                if (fileData != null) {
+
+                    //Specify here model for your CSV
+                    CSVHandler<RawBook> cSVHandler = new CSVHandler<RawBook>();
+
+                    string fileName = cSVHandler.GetFileName(fileData);
+                    List<RawBook> bookList = cSVHandler.SaveWebCSV(fileData);
+
+                    Session["library"] = new Library(bookList, fileName);
+
+                    return Json(Resources.PageText.msgCSVSuccses);
+                }
+            } catch(HeaderValidationException){
+                return Json(Resources.PageText.msgCSVFormat);
+            } catch {
+                return Json(Resources.PageText.msgCSV);
+            }
+            return Json(Resources.PageText.msgCSV);
+        }
 
         public ActionResult Change(string ln, string source) {
             if (ln != null) {

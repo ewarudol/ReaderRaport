@@ -15,31 +15,22 @@ namespace ReaderRaport.Handlers {
         /// <param name="bookName">Raw name of the book.</param>
         /// <param name="msg">Output message based on the process state.</param>
         /// <returns>Url of image.</returns>
-        public string GetCover(string bookName, out string msg) {
+        /// <exception cref="WebException">Cover server is not resonding for given url</exception>
+        /// <exception cref="NullReferenceException">Book doesn't exist in web service</exception>
+        public string GetCover(string bookName) {
 
             string url = BookNamePrepareUrl(bookName);
-
-            msg = "Cover getting goes well";
-
             string href = "";
             HtmlWeb web = new HtmlWeb();
-           
             HtmlDocument doc = new HtmlDocument();
-            try {
-                doc = web.Load(url);
-                foreach(HtmlNode node in doc.DocumentNode.SelectNodes("//a[@class='book-cover-size-60x84 float-l']")) {
-                    foreach (HtmlNode subNode in node.SelectNodes("img")) {
-                        HtmlAttribute hrefAttr = subNode.Attributes["src"];
-                        href=hrefAttr.Value;
-                        return href;
-                    }
+            doc = web.Load(url);
+            foreach(HtmlNode node in doc.DocumentNode.SelectNodes("//a[@class='book-cover-size-60x84 float-l']")) {
+                foreach (HtmlNode subNode in node.SelectNodes("img")) {
+                    HtmlAttribute hrefAttr = subNode.Attributes["src"];
+                    href=hrefAttr.Value;
+                    return href;
                 }
-            } catch (WebException e) {
-                msg = e.Message + " | " + "Covers server is not responding for given url.";
-            } catch {
-                msg = "Book doesn't exist in web service.";
             }
-
             return href;
         }
 
